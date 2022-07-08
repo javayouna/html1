@@ -8,27 +8,31 @@
 <input type = "text" style="width:200px; height:30px;"><br>
 <input type="button" value="로그인" style ="width:100px; height:100px;">
 -->
-<!-- px = pixel em,in,inch 모바일 %, vh, vw
-px:PC,모바일 모두 가능 
--->
+<!-- px = pixel em,in,inch 모바일 %, vh, vw px:PC,모바일 모두 가능 -->
 
-<table border="1" width="550" heigth="120">
+<!-- tabindex 속성은 커서가 tab키를 누를 경우 이동순서를 정할 수 있음 -->
+
+
+
+
+<form mothod="post" action="http://nate.com">
+<table border="1" cellpadding="1" cellspacing="1"   width="550" heigth="120">
 <tr>
 <td width="100">  아이디 </td>
-<td width="280" heigth="30"> <input type="text"> </td>
-<td width="150" rowspan="2" bgcolor="gray" align="center"> 로그인 </td>
+<td align="center"> <input type="text" style="width:280px; heigth:30px;" tabindex="1" > </td>
+<td width="130" heigth="70"rowspan="2" bgcolor="gray" align="center"> <input type="submit" value="로그인" style="width:130; height:70;" tabindex="3"> </td>
 </tr>
 
 <tr>
 <td width="100">패스워드 </td>
-<td width="280" heigth="30"><input type="password">  </td>
+<td align="center"><input type="password"style="width:280px; heigth:30px;" tabindex="2">  </td>
 </tr>
 
 <tr>
-<td width="100"><input type="checkbox">자동로그인 </td>
+<td colspan="3" width="100"><input type="checkbox">자동로그인 </td>
 </tr>
 
 </table>
-
+</form>
 </body>
 </html>
