@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<title>사이트 전체 레이아웃 </title>
+
+<style>
+
+body{margin:0; padding:0;}
+/* position: absolute에 margin:0 auto;(X)*/
+span {display:block;}
+
+ui,ol{list-style:none; 
+margin:0; 
+padding:0;}
+
+.top{width:1200px; 
+height:40px; 
+background-color:#ccc;
+margin:0 auto;
+}
+.top_span{
+height:40px;
+}
+.top_ol{background:red; 
+width:300px; 
+float:right;
+}
+.top_li{width:75px; 
+height:40px; 
+text-align:center; 
+line-height: 40px;
+ float:left;
+font-size:12px;}
+</style>
+</head>
+<body>
+<!-- 최상단(로그인~고객센터) -->
+<div class="top">
+<span class="top_span">
+<ol class="top_ol">
+<li class="top_li">Home</li>
+<li class="top_li">login</li>
+<li class="top_li">member</li>
+<li class="top_li">customer</li>
+</ol>
+
+</span>
+</div>
+
+<!-- 상단 메뉴 파트 -->
+<div class="menu">
+</div>
+
+<!-- 배너파트 -->
+<!-- 상품출력파트 -->
+</body>
+</html>
