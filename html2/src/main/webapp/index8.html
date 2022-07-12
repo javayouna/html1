@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE-edge, chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>HTML4일차 HTML5.0 + css 3.0</title>
+<!-- 모바일 사이즈:340~580px(1스크린), 720~580pc(2스크린) -->
+</head>
+<body>
+<input type="number"><!-- 숫자만 입력하는 디바이스 형태(모바일전용) -->
+<br>
+<input type="color"><!-- 컬러피터 (모바일 및 px사용가능) -->
+<br>
+<input type="tel"><!-- 전화번호 디바이스 형태(모바일 전용) -->
+<br>
+<input type="date"><!-- 달력 디바이스 형태(모바일 전용) -->
+<br>
+<input type="time"><!-- 시간 디바이스 형태(모바일+pc) -->
+<br>
+<input type="week"><!-- 주일 디바이스 형태(모바일+pc) -->
+<br>
+<input type="email"><!-- email을 입력하는 전용 input (모바일) -->
+<br>
+<input type="datetime-local"><!-- 날짜+시간 동시 입력 받음 (모바일+PC) -->
+<br>
+<!-- oninput: input+output 사용시 적용되는 속성 -->
+<form oninput="aa.value=parseInt(a.value)">
+<!-- range:범위 선택 속성 min최소 max최대 -->
+min:1<input type="range" min="1" max="10" id="a">max:10<!-- 날짜+시간 동시 입력 받음 (모바일+PC) -->
+<br>
+<!-- output:input 값을 받아서 출력하는 태그 (for, name) *백엔드 전용 태그 -->
+<output for="a" name="aa" value="5">5</output>
+</form>
+<br>
+<input type="image" src="./logo_quick_01.png">
+<!--  이미지 버튼을 사용할 때 사용하는 속성 -->
+<br>
+<form method="post" action="http://www.naver.com">
+<button type="button">로그인</button> <!-- button type에 꼭 ="button"넣기 -->
+<!-- button: input type 중 버튼에 해당하는(submit,reset,button) 해당
+사항만 추려서 button 태그로 전환하였음. 주의사항 type 미사용시
+무조건 submit으로 작동 함  -->
+</form>
+
+</body>
+</html> 

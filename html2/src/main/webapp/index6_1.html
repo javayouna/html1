@@ -1,10 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<title>사이트 전체 레이아웃</title>
+
+<style>
+body {
+	margin: 0;
+	padding: 0;
+}
+/* position: absolute에 margin:0 auto;(X)*/
+span {
+	display: block;
+}
+
+ui, ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.top {
+	width: 1200px;
+	height: 40px;
+	background-color: #ccc;
+	margin: 0 auto;
+}
+
+.top_span {
+	height: 40px;
+}
+
+.top_ol {
+	width: 300px;
+	float: right;
+}
+
+.top_li {
+	width: 75px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	float: left;
+	font-size: 12px;
+}
+
+.menu {
+	width: 1200px;
+	height: 65px;
+	background-color: #FBEFF2;
+	position: relative;
+	margin: 0 auto;
+	padding: 15px 0 0 0;
+}
+
+.menu1 {
+	width: 240px;
+	height: 50px;
+	background-color: #F3E2A9;
+	position: absolute;
+	float: left;
+	margin-left: 15px;
+}
+
+.menu2 {
+	width: 600px;
+	height: 50px;
+	background-color: bisque;
+	position: absolute;
+	right: 0;
+	margin-right: 15px;
+}
+
+.banner {
+	width: 660px;
+	height: 400px;
+	background-color: #E3CEF6;
+	margin: 0 auto;
+	position: relative;
+	padding-left: 540px;
+}
+
+.disc {
+	width: 120px;
+	height: 20px;
+	list-style: none;
+	position: absolute;
+	bottom: 25px;
+}
+
+.licss {
+	width: 10px;
+	height: 10px;
+	background-color: black;
+	border-radius: 20px;
+	float: left;
+	margin-left: 10px;
+}
+
+.red {
+	background-color: magenta;
+}
+</style>
 </head>
 <body>
+	<!-- 최상단(로그인~고객센터) -->
+	<div class="top">
+		<span class="top_span">
+			<ol class="top_ol">
+				<li class="top_li">Home</li>
+				<li class="top_li">login</li>
+				<li class="top_li">member</li>
+				<li class="top_li">customer</li>
+			</ol>
 
+		</span>
+	</div>
+
+	<!-- 상단 메뉴 파트 -->
+	<form>
+		<div class="menu">
+			<ol class="menu1">
+			</ol>
+			<ol class="menu2">
+			</ol>
+		</div>
+	</form>
+
+	<!-- 배너파트 -->
+	<div class="banner">
+		<ol class="disc">
+			<li class="licss red"></li>
+			<li class="licss"></li>
+			<li class="licss"></li>
+			<li class="licss"></li>
+			<li class="licss"></li>
+		</ol>
+	</div>
+	<!-- 상품출력파트 -->
 </body>
 </html>

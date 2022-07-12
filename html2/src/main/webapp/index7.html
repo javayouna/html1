@@ -1,0 +1,35 @@
+<!DOCTYPE html> <!-- HTML5 사용한다는 뜻 -->
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE-edge, chrome=1">
+<mata name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- viewport를 사용한 이유 모바일 웹에서도 사용할 수 있도록 하기 위해  -->
+<title>HTML4일차 HTML5.0 + css 3.0</title>
+<link rel="stylesheet" type="text/css" href="./index7.css?v=1">
+<!-- link태그:css파이 롤드하기 위해 사용된 태그 -->
+
+
+</head>
+<body>
+<!-- label:span태그의 업그레이드 버전 
+	for 속성 가지고 있음: input type 태그 속성에서
+	id를 이용하여 핸들링 할 수 있음\-->
+<label class="box"></label>
+<input type="checkbox" id="ck"><label for="ck">자동로그인</label><br>
+<input type="checkbox" id="ck"><span for="">자동로그인</span>
+<input type="radio" name="a" id="a1"><label for="a1">동의함</label>
+<input type="radio" name="a" id="a2"><label for="a2">동의안함</label>
+<br><br>
+<!-- text에 list라는 속성 추가됨 datalist태그와 연결 시킬 수 있음 -->
+<input type="text" list="search">
+<datalist id="search"> <!-- datalist는 select의 업그레이드 태그 -->
+	<option>JAVA</option>
+	<option>MYSQL</option>
+	<option>MASSQL</option>
+	<option>HTML</option>
+	<option>CSS</option>
+</datalist>
+</body>
+</html>
+
