@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<title>사이트 전체 레이아웃</title>
+
+<style>
+body {
+	margin: 0;
+	padding: 0;
+}
+/* position: absolute에 margin:0 auto;(X)*/
+span {
+	display: block;
+}
+
+ul, ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.top {
+	width: 1200px;
+	height: 40px;
+	background-color: #ccc;
+	margin: 0 auto;
+}
+
+.top_span {
+	height: 40px;
+}
+
+.top_ol {
+	width: 300px;
+	float: right;
+}
+
+.top_li {
+	width: 75px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	float: left;
+	font-size: 12px;
+}
+
+.menu {
+	width: 1200px;
+	height: 65px;
+	background-color: #FBEFF2;
+	position: relative;
+	margin: 0 auto;
+	padding: 15px 0 0 0;
+}
+
+.menu1 {
+	width: 240px;
+	height: 50px;
+	background-color: #F3E2A9;
+	position: absolute;
+	left: 15px;
+}
+
+.menu2 {
+	width: 600px;
+	height: 50px;
+	background-color: bisque;
+	position: absolute;
+	right: 15px;
+}
+
+.banner {
+	position: relative;
+	margin: 0 auto;
+	background-color: #F2D7D9;
+	height: 400px;
+	width: 1200px;
+	text-align: center; /*자식태그가 inline, inline-block일 경우 text-align:center로
+	화면 가운데 정렬 가능 */
+}
+
+.disc {
+	width: 15px;
+	height: 15px;
+	background-color: #faedcd;
+	border-radius: 15px;
+	float: left;
+	margin-left: 10px
+}
+
+.nomargin {
+	margin-left: 0px;
+}
+
+.disc:hover {
+	background-color: #d4a373;
+	/*margin-left:45%;*/
+}
+
+.disc_span {
+	display: inline-block;
+	/* inline, inline-block:span에 주로 사용하는 속성
+inline:자동 사이즈로 조절이 되나? 줄바꿈 안함 
+(width,hight가 적용되나 line-height가 적용 안됨)
+-text면 모두 안 됨
+inline-block:자동 사이즈로 저절되나 줄바꿈 하지 못함
+(width,hight가 적용되나 line-height가 적용 됨)
+*/
+	height: 15px;
+	/*margin-left:auto, margin-right:auto
+부모 태그 가로 기준으로 왼쪽, 오른쪽 동일한 사이즈 계산하여 적용하는 방식
+단, positino:relactive또는 static일 경우만 사용.... */
+	margin-left: auto;
+	margin-right: auto; 
+	position: relative;
+	top: 375px;
+}
+
+.goods{
+width:1200px; /*1160px*/
+height:800px; /*780px*/ /*auto*/
+background-color: #e9edc9;
+margin: 0 auto; /*padding:20px,20px,0,20px*/
+} 
+ 
+
+/*중요:marhin:0 auto를 사용할 수 있는 경우
+1.positiong:absolute(x)
+2.width값이 무조건 있어야 가능함
+*/
+
+/*.disc_span {
+	height: 15px;
+	display: block;
+	width:100%;
+	position: absolute;
+	bottom:25px; 
+}*/
+.good {
+	width : 250px;
+	height : 300px;
+	background-color: #ccd5ae;
+	margin:40px 0px 0px 40px; /*margin:20px*/
+	float:left; 
+} 
+
+.copyright{
+clear:both;
+width:1200px;
+height:100px;
+background-color:black;
+margin:0 auto;
+font-size:12px;
+} 
+
+</style>
+</head>
+<body>
+	<!-- 최상단(로그인~고객센터) -->
+	<div class="top">
+		<span class="top_span">
+			<ol class="top_ol">
+				<li class="top_li">Home</li>
+				<li class="top_li">login</li>
+				<li class="top_li">member</li>
+				<li class="top_li">customer</li>
+			</ol>
+
+		</span>
+	</div>
+
+	<!-- 상단 메뉴 파트 -->
+	<form>
+		<div class="menu">
+			<ol class="menu1">
+			</ol>
+			<ol class="menu2">
+			</ol>
+		</div>
+	</form>
+
+	<!-- 배너파트 -->
+	<div class="banner">
+
+		<span class="disc_span">
+			<div class="disc nomargin"></div>
+			<div class="disc"></div>
+			<div class="disc"></div>
+			<div class="disc"></div>
+			<div class="disc"></div>
+		</span>
+	</div>
+	<!-- 상품출력파트 여백공간 코드 작성시 좌우 px를 합친다는 생각으로 퍼블리싱 해야함-->
+	<div class="goods">
+		<ul> <!-- <ul class="good_ul">-->	
+		<li class="good 1"></li>
+		<li class="good 2"></li>
+		<li class="good 3"></li>
+		<li class="good 4"></li>
+		<li class="good 5"></li>
+		<li class="good 6"></li>
+		<li class="good 7"></li>
+		<li class="good 8"></li>			
+	</ul>
+	</div>
+	<!-- 카피라이터 팡트 -->
+	<div class="copylight" align="center">
+		<span>Copyright ⓒ2022 Naver Corp. All Rights reserved.</span>
+		<span>회사명, 대표자명, 사업자등록번호, 통신판매번호 <a href="https://ftc.go.kr/bizCommPop.do?wrkr_no=142-81-38153" target="_blank">[사업자등록확인]</a></span>
+		<span>대표전화, 개인정보담당자명, 대표메일, 주소</span>
+	</div>
+</body>
+</html>

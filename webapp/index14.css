@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+   /*   Base code   */
+   body{
+      margin : 0;
+      padding : 0;
+      background-color: none;
+   }
+   a{
+      text-decoration-line : none;
+   }
+   span,label{
+      display : block;
+   }
+   ul,ol{
+      list-style: none;
+      margin : 0;
+      padding : 0;
+   }
+   
+   
+   .box1{
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      padding-left: 50px;
+   }
+   
+   .box2{
+      width: 100px;
+      height: 100px;
+      background-color: green;   
+      padding-left: 50px;
+      box-sizing: border-box;
+      /*   box-sizing: border-box;   */
+/*box-sizing: border-box: padding, border도 적용*/
+   }
+   
+   .box2_2{
+      width: 30px;
+      height: 100px;
+      background-color: black;
+   }
+   
+   .box3{
+      width: 100px;
+      height: 100px;
+      border : 1px solid black;
+   }
+
+   .box4{
+      width: 100px;
+      height: 100px;
+      border : 1px solid black;
+      box-sizing: border-box;
+   }
+/*
+nth-child(DOM) //퍼블리셔
+nth-of-type(node) //백엔드
+*/
+   
+   .ulcss > li:nth-child(1){
+      color : red;
+   }
+   .ulcss > li:nth-child(4){
+      color : red;
+   }
+   .ulcss > li:nth-child(5){
+      color : red;
+   }
+   /*
+   nth-child : (DOM)   상관 없이 순서대로 순번을 가짐
+   nth-of-type : (NODE) 자기 tag끼리 순서를 가짐
+   
+   ex) ulcss >(안에) li를 
+   */
+   .olcss > li:nth-of-type(2){
+      color : blue;
+   }
+   .olcss > li:nth-of-type(3){
+      color : blue;
+   }   
+   /*DOM 형태 전체 카운팅 함 (자식태그를 순서대로 나열함) */
+   .div1 > span:nth-child(4){
+      color : red;
+   }
+   /* node 태그끼리 카운팅함 */
+   .div2 > span:nth-of-type(3){ /*자기끼리 모임! span의 3번쨰 (전체의 3번이 아님)*/
+      color : red;
+   }
+   
+      /*   tag순서는 3번이지만  node 순서가 1번이기때문에 :nth-of-type(1)    */
+   .div2 > label:nth-of-type(1){ 
+      color : blue;
+   }
+   
+   /*   DOM   */
+   .object1 {
+      
+   }
+   
+   .object1 > span {
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+   }
+
+   .object1 > span:nth-child(4){
+      background-color: yellowgreen;
+   }
+
+   .object1 > span:nth-child(odd){    /* odd(홀수) even(짝수) */   
+      background-color: red;
+   }
+   
+   .object2{
+
+   }
+   
+   .object2 > span,label{
+      width : 50px;
+      height: 50px;
+      background-color: blue;
+   }
+   
+   .object2 > span:nth-of-type(even),label:nth-of-type(odd){
+      background-color: yellowgreen;
+   }
