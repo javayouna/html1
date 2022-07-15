@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang = "ko">
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+<!-- 	<meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+	<title> javascript 3일차 간편 회원 가입 </title>
+	</head>
+	<script src="http://192.168.100.207:8080/html2/js16_id.js?v=20220715021"></script>
+	<script src="http://192.168.100.208:8080/html2/js16_name.js?v=20220715021"></script>
+	<script> 
+
+		function search_btn(){
+			var search1 = document.getElementById("search_bar");
+			var search2 = document.getElementById("se").value;
+			if(search1,search2 == ""){
+ 				alert("이름 및 아이디를 선택해주세요");
+ 				search1.focus();
+				}
+			else if(search2 == "select_name"){
+				nameck(search1.value);
+			}
+			else if (search2 == "select_id"){
+				idck(search1.value);
+			}
+		}
+		
+
+	
+	
+	</script>
+	<style>
+		/*	Base code	*/
+		body{
+			margin : 0;
+			padding : 0;
+			background-color: none;
+		}
+		
+		a{
+			text-decoration-line : none;
+		}
+		
+		span,label{
+			display : block;
+		}
+		
+		ul,ol{
+			list-style: none;
+			margin : 0;
+			padding : 0;
+		}
+		
+		.selectcss{
+			text-align: center;
+		}
+		
+		.btn{
+			background-color: skyblue;
+			color : white;
+			border : none;
+			border : 1px solid black;
+		}
+		
+		.searchbar{
+			border : none;
+			border-bottom: 1px solid black;
+			
+		}
+				
+	</style>
+	<body>
+		<select name ="se" id="se" class="selectcss" >
+			<option value="">[검색할 파트]</option>
+			<option value="select_name">이름</option>
+			<option value="select_id">아이디</option>
+		</select>
+			<input type="text" class="searchbar" name="search_bar" id="search_bar" placeholder = "이름 및 아이디 입력">
+			<input type="button" class="btn" value="고객검색" onclick="search_btn();">
+	</body>
+</html>
